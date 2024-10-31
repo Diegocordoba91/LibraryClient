@@ -1,0 +1,38 @@
+<div class="container">
+
+    <div class="container text-center" style="margin:30px ">
+        <h3>Agregar Nueva Reserva</h3>
+    </div>
+    
+        <form (ngSubmit)="onSubmit()" class="row g-2">
+            <div class="col-md-6">
+                <label for="usuario" class="form-label">Usuario</label>
+                <br>
+                <select id="usuario" [(ngModel)]="usuarioSeleccionado" name="usuario">
+                    <option *ngFor="let usuario of usuarios" [ngValue]="usuario">{{ usuario.nombre }} {{ usuario.apellido }}</option>
+                  </select>
+            </div>
+            <div class="col-md-6">
+                <label for="usuario" class="form-label">Libros</label>
+                <br>
+                <select id="libro" [(ngModel)]="libroSeleccionado" name="libro">
+                    <option *ngFor="let libro of libros" [ngValue]="libro">{{ libro.titulo }}</option>
+                  </select>
+            </div>
+            <div class="col-md-3">
+                <label for="fechareserva" class="form-label">Fecha Reserva</label>
+                <input type="date" class="form-control" required id="fechareserva" name="fechareserva" 
+                 [(ngModel)]="fechareservaSeleccionada">
+            </div>
+            
+            
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary m-3">Guardar</button>
+                <a href="/reservas" class="btn btn-danger m-3">Regresar</a>
+            </div>
+            
+        </form>
+
+    
+
+</div>

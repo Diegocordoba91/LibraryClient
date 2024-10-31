@@ -1,0 +1,46 @@
+<div class="container">
+
+    <div class="container text-center" style="margin:30px ">
+        <h3>Editar Usuario</h3>
+    </div>
+    
+        <form (ngSubmit)="onSubmit()" class="row g-2">
+            <div class="mb-3">
+                <label for="documento" class="form-label">Número de Documento</label>
+                <input type="number" class="form-control" required id="numeroDocumento" name="numeroDocumento" 
+                 [(ngModel)]="usuario.documento">
+                <div id="numeroDocumentoFeedback" class="invalid-feedback">
+                    Ingresa número de documento
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre"
+                required="true" [(ngModel)]="usuario.nombre">
+            </div>
+            <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido"
+                required="true" [(ngModel)]="usuario.apellido">
+            </div>
+            <div class="col-md-6">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" name="direccion"
+                [(ngModel)]="usuario.direccion">
+            </div>
+            <div class="col-md-6">
+                <label for="telefono" class="form-label">Número de Telefono</label>
+                <input type="number" step="any" class="form-control" id="telefono" name="telefono"
+                [(ngModel)]="usuario.telefono">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary m-3">Editar</button>
+                <a href="/" class="btn btn-danger m-3">Regresar</a>
+            </div>
+            
+        </form>
+
+    
+
+</div>
+
